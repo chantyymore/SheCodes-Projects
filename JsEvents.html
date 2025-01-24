@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JS Events</h1>
+    <p>
+      <a href="https://www.w3schools.com/js/js_events.asp" id="follow-link"
+        >About javascript events</a
+      >
+    </p>
+    <script>
+      function clickFunction(event) {
+        event.preventDefault();
+
+        let askQuestion = prompt(
+          "Hi, why do you want to learn about js events?"
+        );
+        alert("Okay you we will assist you");
+      }
+
+      let eventLink = document.querySelector("#follow-link");
+      eventLink.addEventListener("click", clickFunction);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>She Codes Plus</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+  font-family: sans-serif;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  margin: 0;
+  font-size: 34px;
+  line-height: 48px;
+}
+
+h1 h2,
+h3 {
+  color: #231d3c;
+}
+
+.logo {
+  display: block;
+  margin: 30px auto;
+  width: 150px;
+}
+
+.img-positioning {
+  display: block;
+  margin: 30px auto;
+  width: 75%;
+}
+
+.cities {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #fff;
+  padding: 20px;
+}
+
+    </style>
+  </head>
+
+  <body>
+    <img src="logo.png" alt="She Codes Plus Logo" class="logo" />
+    <h1>Forms</h1>
+  
+
+    <h3>Challenge 1</h3>
+    <p>When clicking this button, alert "Hooray!"</p>
+    <button id="special-button">Click me</button>
+
+    <h3>Challenge 2</h3>
+    <p>
+      When submitting the form, alert the value of the password input
+      <form id="password-form">
+        <input type="password" id="password-input" placeholder="Enter your password">
+        <input type="submit" value="Sign up">
+      </form>
+    </p>
+
+    <h3>Challenge 3</h3>
+    <p>
+        When submitting the form, alert the value of the username and email inputs
+        <form id="signup-form">
+          <input type="email" id="email-input" placeholder="Enter your email" required>
+          <input type="username" id="username-input" placeholder="Enter your username" required>
+          <input type="submit" value="Sign up">
+        </form>
+    </p>
+      
+    <script>
+      function submitForm(event){
+        event.preventDefault();
+        alert("Hooray!");
+      }
+
+      function getPassword(event){
+        event.preventDefault();
+        let passwordInput = document.querySelector("#password-input");
+        if(passwordInput.value){   
+          alert(`The value of your password is ${passwordInput.value}`);
+        }else {
+          alert("The value of your password is NULL");
+        }
+   
+      }
+
+      function signUp(event) {
+        event.preventDefault();
+        let email = document.querySelector("#email-input");
+        let username = document.querySelector("#username-input");
+
+        if(username.value){
+          alert(`Your username is ${username.value}`);
+        }else{
+          alert(`Enter your username below.`);
+        }
+
+        if(email.value){
+          alert(`Your username is ${email.value}`);
+        }else{
+          alert(`Enter your email below.`);
+        }
+      }
+
+      let clickMeButton = document.querySelector("#special-button");
+      clickMeButton.addEventListener("click", submitForm);
+
+      let passwordForm = document.querySelector("#password-form");
+      passwordForm.addEventListener("submit",getPassword);
+
+      let signupForm = document.querySelector("#signup-form");
+      signupForm.addEventListener("submit",signUp);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fictional books</title>
+    <style>
+      body {
+        background-image: linear-gradient(to top, #fdffed 0%, #fbf9a3 100%);
+      }
+      h1 {
+        text-align: center;
+        color: #7ac6db;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h2 {
+        text-align: center;
+        border: 2px double #e5b0cd;
+        border-radius: 10px;
+        padding: 10px;
+        margin-left: 200px;
+        margin-right: 200px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .fictional {
+        color: #7ac6db;
+      }
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        line-height: 1.5;
+      }
+      .difinition {
+        text-align: center;
+      }
+      em {
+        color: #e5b0cd;
+        text-decoration: underline;
+        font-size: 20px;
+      }
+      a {
+        color: #7ac6db;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+        max-width: 60%;
+      }
+      .favs {
+        text-align: center;
+        margin-bottom: 2px;
+      }
+      ol {
+        list-style: none;
+      }
+      li {
+        text-align: center;
+      }
+      hr {
+        width: 50%;
+        height: 2px;
+        background-color: #7ac6db;
+        border: none;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #ed8be3;
+        color: white;
+        border-color: #ed8be3;
+        border-radius: 4px;
+        font-size: 20px;
+        padding: 3px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      button:hover {
+        background: white;
+        color: #ed8be3;
+        border-color: #ed8be3;
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+      }
+      footer {
+        text-align: center;
+        margin-top: 10px;
+        font-family: "Courier New", Courier, monospace;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reading passion</h1>
+    <h2>My love for <span class="fictional">fictional</span> books</h2>
+    <p class="difinition">
+      "Fiction" refers to literature created from the imagination. Mysteries,
+      science fiction, romance, fantasy, chick lit, crime thrillers are all
+      fiction genres.
+    </p>
+    <p>
+      <em>Why i love fiction books?</em><br />
+      Fiction gives an escape from reality. When i am tired or have had a long
+      day, reading a fiction book just helps me relax and forget about
+      everything else. Reading it is a great way to distress and boost your mood
+      while improving your vocabulary at the same time.
+    </p>
+    👇
+    <a href="https://www.hooverlibrary.org/faq/fiction_vs_nonfiction"
+      >Read more about it on Hoover Library</a
+    >
+
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/676/original/books.jpg?1723851931"
+    />
+    <hr />
+    <p class="favs">
+      <strong>Personal favorites are:</strong>
+    </p>
+    <ol>
+      <li>To Kill a Mockingbird by Harper Lee</li>
+      <li>It ends with by Colleen Hover</li>
+    </ol>
+    <hr />
+    <button>Get recommendations</button>
+    <footer>Coded by Keamogetswe Moeketsi</footer>
+    <script>
+      function askName() {
+        let name = prompt("Please enter your name:");
+
+        if (name && name.length > 0) {
+          recommentBook(name);
+        } else {
+          alert("Invalid name!");
+        }
+      }
+      function recommentBook(name) {
+        let email = prompt("Enter your email:");
+
+        alert(
+          "Hey " +
+            name +
+            ", we will send a link of recommended books via email!"
+        );
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", askName);
+    </script>
+  </body>
+</html>

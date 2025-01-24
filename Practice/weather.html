@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather</title>
+    <style>
+      h1 {
+        color: #1a64d6;
+        text-align: center;
+        font-size: 34px;
+      }
+      h2 {
+        text-align: center;
+        font-size: 34px;
+        font-weight: normal;
+      }
+      li {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        border-radius: 15px;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+      }
+      li:hover {
+        background: #fffbef;
+        max-width: 400px;
+      }
+      ul {
+        list-style: none;
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .days {
+        text-align: center;
+        font-weight: bold;
+      }
+      .degrees {
+        text-align: center;
+        color: #4c4b47;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 15px 20px;
+        font-size: medium;
+        border-radius: 30px;
+        color: white;
+        background: #1a64d6;
+        border: 1px solid #1a64d6;
+        margin-top: 10px;
+      }
+      button:hover {
+        cursor: pointer;
+        color: #1a64d6;
+        background: white;
+        border: 1px solid #1a64d6;
+      }
+      footer {
+        text-align: center;
+        color: #4c4b47;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-family: monospace;
+        opacity: 0.8;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      🌤 <br />
+      Currectly 21° in Pretoria
+    </h1>
+    <h2>13° / <strong>23°</strong></h2>
+    <ul>
+      <li>
+        <div class="days">🌧Tomorrow</div>
+        <div class="degrees">10° / <strong>22°</strong></div>
+      </li>
+      <li>
+        <div class="days">🌥Saturday</div>
+        <div class="degrees">15° / <strong>17°</strong></div>
+      </li>
+      <li>
+        <div class="days">☀️Sunday</div>
+        <div class="degrees">25° / <strong>28°</strong></div>
+      </li>
+    </ul>
+    <button>Change city</button>
+    <footer>Coded by Keamogetswe Moeketsi</footer>
+  </body>
+</html>

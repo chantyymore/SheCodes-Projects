@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewpoint" content="width=device-width,initial-scale=1,0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SheCodes</title>
+  </head>
+  <style>
+    h1 {
+      color: #1a64d6;
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 25px;
+    }
+    .weather {
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      font-size: 20px;
+    }
+    li {
+      margin-bottom: 50px;
+      max-width: 400px;
+    }
+    .days {
+      font-weight: bold;
+    }
+    .degrees {
+      color: grey;
+    }
+    li:hover {
+      background: #fffbef;
+    }
+
+    button {
+      padding: 20px 30px 20px 30px;
+      display: block;
+      margin: 0% auto 20px auto;
+      color: white;
+      background: #1a64d6;
+      border: 1px solid white;
+      border-radius: 50px;
+      transition: all 150ms ease-in-out;
+    }
+    button:hover {
+      color: #1a64d6;
+      background: white;
+      cursor: pointer;
+    }
+    .coder {
+      color: gray;
+      font-family: monospace;
+      font-size: 15px;
+    }
+  </style>
+  <body>
+    <div class="weather">
+      <h1>🌤 <br />Currently 21° in Tokyo</h1>
+      <h2>13° /<strong> 23°</strong></h2>
+      <ul>
+        <li>
+          <div class="days">🌧 Tomorrow</div>
+          <br />
+          <div class="degrees">10° /<span class="boldie"> 22°</span></div>
+        </li>
+        <li>
+          <div class="days">🌥Saturday</div>
+          <br />
+          <div class="degrees">15° / <span class="boldie"> 17°</span></div>
+        </li>
+        <li>
+          <div class="days">☀️ Sunday</div>
+          <br />
+          <div class="degrees">25° / <span class="boldie"> 28°</span></div>
+        </li>
+      </ul>
+      <button>Change city</button>
+      <p class="coder">Coded by Keamogetswe Moeketsi</p>
+    </div>
+  </body>
+</html>

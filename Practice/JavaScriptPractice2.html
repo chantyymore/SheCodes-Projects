@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      ul {
+        padding: 0;
+        text-align: center;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid blue;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SheCodes</h1>
+    <ul>
+      <li>Workshops</li>
+      <li>Courses</li>
+      <li>Students</li>
+    </ul>
+    <button>Contact me</button>
+
+    <script>
+      function contactUs() {
+        let name = prompt("What is your name");
+        let email = prompt("Enter your email");
+
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = "Hello " + name + ", we will be in touch with you!";
+      }
+      let contactButton = document.querySelector("button");
+      contactButton.addEventListener("click", contactUs);
+    </script>
+  </body>
+</html>
