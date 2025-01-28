@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SheCodes Plus</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>  
+  </head>
+
+  <body>
+    <img src="images/logo.png" alt="SheCodes Plus Logo" class="logo" />
+    <h1>JavaScript Weather API</h1>
+
+    <h3>JS Challenge 1</h3>
+    <p>Import Axios</p>
+
+    <h3>JS Challenge 2</h3>
+    <p>Get your API key and save in a variable called apiKey</p>
+
+    <h3>JS Challenge 3</h3>
+    <p>Get the API response for the weather in Sydney, using metrics unit</p>
+
+    <h3>JS Challenge 4</h3>
+    <p>Log the current temperature in Sydney</p>
+
+    <h3>JS Challenge 5</h3>
+    <p>
+      Replace the h1 of this page with the weather in Sydney: i.e: It is 19
+      degrees in Sydney
+    </p>
+
+    <script>
+      function displayTemperature(response){
+        let currentTemperature = response.data.temperature.current;
+        console.log(currentTemperature); //challenge 4
+        //challenge 5
+        
+        let heading1 = document.querySelector("h1");
+        heading1.innerHTML = `${currentTemperature}`;
+      }
+
+      //challenge 2
+      let city ="Sydney";
+      let unit ="metric"
+      let apiKey = "6b534oeab5dabbea88bbtf6452c02346";
+
+      //challenge 3
+      let apiURL =`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${unit}`;
+      axios.get(apiURL).then(displayTemperature);
+      
+    </script>
+  </body>
+</html>
